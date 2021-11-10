@@ -7,6 +7,7 @@ let todoList = [];
 
 if (localStorage.getItem('todo')) {
     todoList = JSON.parse(localStorage.getItem('todo'));
+    viewMessages();
 }
 
 
