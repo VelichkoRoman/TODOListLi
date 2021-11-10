@@ -5,6 +5,12 @@ let todo = document.querySelector('.todo');
 
 let todoList = [];
 
+if (localStorage.getItem('todo')) {
+    todoList = JSON.parse(localStorage.getItem('todo'));
+}
+
+
+
 addButton.addEventListener('click', function() {
 
     const newTodo = {
@@ -16,6 +22,7 @@ addButton.addEventListener('click', function() {
     todoList.push(newTodo);
     viewMessages();
     // console.log(todoList);
+    localStorage.setItem('todo', JSON.stringify(todoList));
 })
 
 function viewMessages() {
