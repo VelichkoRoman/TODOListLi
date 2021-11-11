@@ -1,0 +1,107 @@
+body {
+    background-color: #0f0f0f;
+    font-family: sans-serif;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box; 
+  }
+  
+  .container {
+    margin: 0 auto;
+    padding-top: 50px;
+  }
+  
+  .important {
+    font-weight: bold;
+    color: #b41114; 
+  }
+  
+  .todo_list {
+    max-width: 400px;
+    display: block;
+    margin: 0 auto 40px;
+    background-color: 0f538b;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 50px 0 #0f538b; 
+  }
+  
+  h1 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: rgb(57, 255, 156);
+    font-size: 25px; 
+  }
+  
+  .create_new_todo {
+    text-align: center; 
+  }
+  
+  input[type=text] {
+    width: 376px;
+    padding: 10px; 
+    border-radius: 20px;
+    border: orange;
+    box-shadow: 0 5px 50px 0 #0f538b; 
+    outline: none;
+  }
+  
+  button {
+    margin-top: 25px;
+    width: 100px;
+    padding: 10px;
+    cursor: pointer; 
+    border-radius: 20px;
+    border: orange;
+    background-color: palegreen;
+    box-shadow: 0 5px 50px 0 #0f538b; 
+
+  }
+  
+  .todo {
+    padding-left: 0; 
+  }
+  .todo li {
+    padding: 1em;
+    list-style-type: none; 
+    color: peru;
+  }
+  
+  input[type=checkbox] {
+    opacity: 0;
+    position: absolute; 
+  }
+  
+  input[type=checkbox], label {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 5px;
+    cursor: pointer; 
+  }
+  
+  input[type=checkbox] + label:before {
+    content: '';
+    background: none;
+    border-radius: 5px;
+    border: 2px solid rgb(224, 29, 29);
+    display: inline-block;
+    vertical-align: middle;
+    width: 10px;
+    height: 10px;
+    padding: 2px;
+    margin-right: 10px;
+    text-align: center; 
+  }
+  
+  input[type=checkbox]:checked + label:before {
+    content: "";
+    display: inline-block;
+    width: 2px;
+    height: 5px;
+    border: solid green;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    border-radius: 0;
+    margin: 0 15px 5px 5px; 
+  }
+  
