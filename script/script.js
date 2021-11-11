@@ -41,3 +41,19 @@ function viewMessages() {
         todo.innerHTML = addTask;
     })
 }
+
+todo.addEventListener('change', function(e){
+    let forLabel = todo.querySelector('[for=' + e.target.getAttribute('id'));
+    let valueLabel = forLabel.innerHTML;
+    todoList.forEach(function(item){
+        if (item.todo === valueLabel){
+            item.checked = !item.checked;
+            addDeleteButton += ``
+            localStorage.setItem('todo', JSON.stringify(todoList));
+
+        }
+    })
+    console.log(valueLabel);
+})
+
+console.log(todo);
